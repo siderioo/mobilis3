@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mobilis — Ma maison, ma route, mon monde</title>
+  <meta name="description" content="Mobilis — conteneurs aménagés, personnalisés et mobiles. Liberté, design et durabilité." />
+
+  <!-- Styles: simple, moderne et responsive -->
+  <style>
+    :root{
+      --bg: #f7faf9;
+      --card: #ffffff;
+      --accent: #2b8a7a;
+      --accent-2: #1f6fbd;
+      --muted: #6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius: 14px;
+      --shadow: 0 6px 18px rgba(15,23,42,0.08);
+      --maxw: 1100px;
+      --fw-heading: 700;
+      --fw-body: 400;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f7faf9 0%, #eef6f4 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:24px;}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:800;
+      box-shadow:var(--shadow);
+      font-size:20px;
+    }
+    .brand h1{margin:0;font-size:20px;letter-spacing:-0.2px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    nav a.cta{background:var(--accent);color:#fff}
+    main{margin-top:26px}
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+      display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center;
+    }
+    .hero h2{margin:0;font-size:28px;font-weight:800;}
+    .hero p{color:var(--muted);margin-top:12px}
+    .cta-row{margin-top:18px;display:flex;gap:12px}
+    .btn{
+      padding:10px 16px;border-radius:12px;border:0;font-weight:600;cursor:pointer;
+    }
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{background:transparent;border:1.5px solid rgba(15,23,42,0.06)}
+    .card{
+      background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow);
+    }
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .feature{padding:18px;border-radius:12px;background:linear-gradient(180deg, #fff, #fbfdfa);text-align:left}
+    .feature h4{margin:8px 0 6px 0}
+    .muted{color:var(--muted);font-size:14px}
+    section{margin-top:24px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{display:flex;flex-direction:column;gap:8px}
+    .tag{display:inline-block;background:var(--glass);padding:6px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
+    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:14px;padding:18px 6px}
+    @media(max-width:960px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .grid-2{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    @media(max-width:520px){
+      .features{grid-template-columns:1fr}
+      .logo{width:52px;height:52px}
+    }
+    .hero-visual{border-radius:10px;overflow:hidden}
+    .hero-visual img{display:block;width:100%;height:100%;object-fit:cover}
+    .price{font-weight:800;color:var(--accent-2);font-size:20px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>Mb</div>
+        <div>
+          <h1>Mobilis</h1>
+          <div class="muted" style="font-size:13px">Ma maison, ma route, mon monde</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#offre">Offre</a>
+        <a href="#gammes">Gammes</a>
+        <a href="#strategie">Stratégie</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h2>Conteneurs habitables, personnalisés et transportables</h2>
+          <p class="muted">Mobilis combine liberté, design et durabilité. Habite où tu veux, comme tu veux — avec le transport inclus et des options écologiques.</p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary">Découvrir nos gammes</button>
+            <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+          </div>
+
+          <div style="margin-top:18px" class="card">
+            <strong>Clients cibles :</strong> <span class="tag">25-35 ans</span> <span class="tag">Nomades</span> <span class="tag">Télétravailleurs</span>
+            <div style="margin-top:8px" class="muted">Zones : France → Europe • Environnement : rural & côtier</div>
+          </div>
+
+          <div style="margin-top:14px" class="features" aria-hidden>
+            <div class="feature card">
+              <strong>Transport inclus</strong>
+              <div class="muted">Déménagement clé en main — on vous emmène où vous souhaitez.</div>
+            </div>
+            <div class="feature card">
+              <strong>Personnalisation</strong>
+              <div class="muted">Design sur-mesure, panneaux solaires, domotique, options RSE.</div>
+            </div>
+            <div class="feature card">
+              <strong>Expérience</strong>
+              <div class="muted">Vivre nomade premium, intégration éco-villages.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card hero-visual">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9c1b7e8a2a8b8d9b1f8e3f3bb7b3f5d6" alt="Conteneur aménagé Mobilis au bord de la mer" />
+        </aside>
+      </section>
+
+      <section id="offre">
+        <h3 style="margin-top:26px">Offre & Gammes</h3>
+        <div class="grid-2">
+          <div class="card">
+            <h4>Nos gammes</h4>
+            <div class="list">
+              <div><strong>Essential</strong> — minimaliste, abordable. Idéal pour premiers acheteurs.</div>
+              <div><strong>Explorer</strong> — autonomie & mobilité renforcées (panneaux solaires, eau).</div>
+              <div><strong>Premium</strong> — luxe, domotique et finitions haut de gamme.</div>
+              <div><strong>Famille</strong> — configuration double conteneur, coliving.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Ce qui nous distingue</h4>
+            <ul style="margin:8px 0 0 18px;color:var(--muted)">
+              <li><strong>Transport intégré</strong> — on se charge du déménagement.</li>
+              <li><strong>Personnalisation</strong> complète, design & options RSE.</li>
+              <li><strong>Expérience</strong> lifestyle et spots partenaires.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="strategie">
+        <h3 style="margin-top:22px">Stratégie Marketing</h3>
+        <div class="card">
+          <p class="muted">Nous utilisons une <strong>stratégie différenciée</strong> : plusieurs gammes, messages adaptés, prix cohérents par segment.</p>
+          <p class="muted">Pourquoi ? Parce que <em>les besoins et budgets diffèrent</em>. Adapter l’offre permet d’augmenter la satisfaction et la rentabilité.</p>
+
+          <h4 style="margin-top:12px">Actions concrètes</h4>
+          <ul style="margin-left:18px;color:var(--muted)">
+            <li>Campagnes sociales ciblées par gamme (Instagram / TikTok / YouTube)</li>
+            <li>Showroom mobile (conteneur expo itinérant)</li>
+            <li>Partenariats spots, éco-villages et influenceurs</li>
+            <li>Financements : leasing, location-vente</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3 style="margin-top:22px">Contact & Call to action</h3>
+        <div class="card">
+          <p class="muted">Tu veux créer un Mobilis ou intégrer un showroom ?</p>
+
+          <form name="contact" method="POST" data-netlify="true" style="display:flex;flex-direction:column;gap:10px">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="text" name="name" placeholder="Nom / Entreprise" style="padding:10px;border-radius:10px;border:1px solid #e6e9ef" required />
+            <input type="email" name="email" placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid #e6e9ef" required />
+            <textarea name="message" placeholder="Ton message (ex: demande showroom, demande de prix)" rows="4" style="padding:10px;border-radius:10px;border:1px solid #e6e9ef" required></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+              <button type="button" class="btn btn-outline" onclick="window.open('https://www.canva.com','_blank')">Créer logo sur Canva</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        © <strong>Mobilis</strong> — Conteneurs aménagés • Prototype de site • Remplace les images par les tiennes
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
